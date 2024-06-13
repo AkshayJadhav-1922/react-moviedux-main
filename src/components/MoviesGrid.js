@@ -97,8 +97,8 @@ export default function MoviesGrid({ movies, watchlist, toggleWatchlist }) {
           </select>
         </div>
       </div>
-
-      <div className="movies-grid">
+      {
+        filteredMovies.length > 0 ? (<div className="movies-grid">
         {filteredMovies.map((movie) => (
           <MovieCard
             movie={movie}
@@ -107,7 +107,9 @@ export default function MoviesGrid({ movies, watchlist, toggleWatchlist }) {
             isWatchlisted={watchlist.includes(movie.id)}
           ></MovieCard>
         ))}
-      </div>
+      </div>) : <h1>No Result</h1>
+      }
+      
     </div>
   );
 }
