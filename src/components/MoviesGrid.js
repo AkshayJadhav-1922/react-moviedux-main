@@ -9,7 +9,7 @@ export default function MoviesGrid({ movies, watchlist, toggleWatchlist }) {
   const [rating, setRating] = useState("All");
 
   const handleSearchChange = (e) => {
-     setSearchTerm(e.target.value); 
+     setSearchTerm(e.target.value);  
   };
 
   const handleGenreChange = (e) => {
